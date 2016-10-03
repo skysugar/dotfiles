@@ -264,7 +264,7 @@ for_window [title=".*Atom"] floating enable
 #exec xfce4-panel
 #exec xmodmap ~/.Xmodmap
 
-exec_always --no-startup-id numlockx on
+#exec_always --no-startup-id numlockx on
 exec_always --no-startup-id xset dpms 600
 exec_always --no-startup-id xflux -g 104.06 -l 30.67
 exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start
