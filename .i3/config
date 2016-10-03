@@ -207,12 +207,10 @@ bindsym $mod+Shift+bracketright move container to workspace next
 
 #bindsym $mod+Shift+c kill
 
-#bindsym $mod+c exec chromium
-#bindsym Mod1+Shift+i exec firefox
-bindsym Mod1+Shift+i exec google-chrome-stable
-bindsym Mod1+Shift+c exec mousepad
-bindsym Mod1+Shift+e exec xfe
-bindsym $mod+Ctrl+l exec i3lock -c 000000
+#bindsym Mod1+Shift+i exec --no-startup-id firefox
+bindsym Mod1+Shift+i exec --no-startup-id google-chrome-stable
+bindsym Mod1+Shift+e exec --no-startup-id xfe
+bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000000
 
 focus_follows_mouse yes
 #focus_follows_mouse no
@@ -238,7 +236,6 @@ bindsym $mod+c focus child
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+grave workspace back_and_forth
 
-#for_window [title="gmrun"] floating enable
 #for_window [class="xpad"] floating enable
 #for_window [class="xterm"] floating enable
 for_window [class="Wireshark.*"] floating enable
