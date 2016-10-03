@@ -31,8 +31,8 @@ xset b off
 [ -f /usr/bin/fcitx ] && fcitx -d &> /dev/null
 [ -f /usr/bin/volumeicon ] && volumeicon &
 [ -f /usr/bin/urxvtd ] && /usr/bin/urxvtd -q -f -o &
-[ -f /usr/bin/feh ] && /usr/bin/feh --bg-scale /home/sugar/images/walls/noisy_arch_dark.jpg &
-[ -f /usr/bin/numlockx ] && /usr/bin/numlockx
+[ -f /usr/bin/feh ] && /usr/bin/feh --bg-scale ~/dotfiles/wallpapers/noisy_arch_dark.jpg &
+#[ -f /usr/bin/numlockx ] && /usr/bin/numlockx
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 #[ -f /usr/bin/xcompmgr ] && /usr/bin/xcompmgr -fnc &
 [ -f /usr/bin/i3 ] && exec /usr/bin/i3
