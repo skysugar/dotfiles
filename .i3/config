@@ -20,7 +20,7 @@ bindsym $mod+u border none
 #font -microsoft-microsoft yahei-medium-r-normal--12-0-0-0-p-0-iso10646-1
 #font -misc-hiragino sans gb w3-light-r-normal--0-0-0-0-p-0-iso10646-1
 #font -wenquanyi-wenquanyi bitmap song-medium-r-normal-*-13-130-75-75-p-80-iso10646-1
-font pango:Monaco 10
+font pango:Monaco 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -265,6 +265,7 @@ for_window [title=".*Atom"] floating enable
 #exec xmodmap ~/.Xmodmap
 
 #exec_always --no-startup-id numlockx on
+exec_always --no-startup-id xbacklight -set 60
 exec_always --no-startup-id xset dpms 600
 exec_always --no-startup-id xflux -g 104.06 -l 30.67
 exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start
