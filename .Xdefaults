@@ -30,11 +30,10 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-!URxvt*font: xft:Monospace:pixelsize=14
-!URxvt*boldFont: xft:Monospace:pixelsize=14
-!URxvt*font: xft:Monospace:pixelsize=14:antialias=true:Bold,xft:Monospace:pixelsize=14:
-!URxvt*boldFont: Monospcae:pixelsize=14:antialias=true:Bold,xft:Monospace:pixelsize=14:
+!URxvt*font:xft:Monospace:pixelsize=14
+!URxvt*boldFont:xft:Monospace:pixelsize=14
+!URxvt*font:xft:Monospace:pixelsize=14:antialias=true:Bold,xft:Monospace:pixelsize=14:
+!URxvt*boldFont:Monospcae:pixelsize=14:antialias=true:Bold,xft:Monospace:pixelsize=14:
 URxvt.font:xft:Menlo:bold:pixelsize=12:antialias=true,xft:SimSun:bold:pixelsize=14:antialias=true
 URxvt.boldFont:xft:Menlo:bold:pixelsize=12:antialias=true,xft:SimSun:bold:pixelsize=14:antialias=true
 

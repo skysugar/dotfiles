@@ -20,7 +20,7 @@ bindsym $mod+u border none
 #font -microsoft-microsoft yahei-medium-r-normal--12-0-0-0-p-0-iso10646-1
 #font -misc-hiragino sans gb w3-light-r-normal--0-0-0-0-p-0-iso10646-1
 #font -wenquanyi-wenquanyi bitmap song-medium-r-normal-*-13-130-75-75-p-80-iso10646-1
-font pango:Monaco 9
+font pango:Monacospace 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -32,9 +32,6 @@ bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+Q kill
-
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
 
 # change focus
 #bindsym $mod+j focus left

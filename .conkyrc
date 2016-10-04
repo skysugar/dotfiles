@@ -34,9 +34,9 @@ ${endif}\
  ${loadavg 1} \
  ${mem} \
  ${fs_used /home} \
-${if_match "${acpiacadapter}"=="on-line"} \
+${if_match "${acpiacadapter}"=="on-line"}\
  \
-${else} \
+${else}\
  ${battery_percent BAT1}% \
 ${endif} \
 ${time %Y/%m/%d %A %H:%M}
