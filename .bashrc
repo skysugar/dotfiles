@@ -9,6 +9,7 @@ alias ls='ls --color=auto'
 
 #PS1='\e[35;1m\W \e[31;1m>\e[32;1m>\e[33;1m>\e[0m '
 
+
 cl()
 {
 if [ -d $1 ]; then

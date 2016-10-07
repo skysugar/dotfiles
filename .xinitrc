@@ -20,6 +20,7 @@ export $(gnome-keyring-daemon -s)
 ## vertical screen 0 1 2 3 
 #xrandr -o 0
 # double screen
+#xrandr --output "DP-0" --primary --auto --output "HDMI-0" --right-of "DP-0" --auto
 #xrandr --output DVI-0 --auto --pos 0x0 --output DisplayPort-0 --auto --right-of DVI-0
 #xrandr --output HDMI1 --mode 1920x1080 --pos 0x0 --output VGA1 --auto --left-of HDMI1
 
