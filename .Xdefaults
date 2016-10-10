@@ -15,6 +15,7 @@ Xft.hintstyle:              hintslight
 ! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
 !-------------------------------------------------------------------------------
 
+URxvt.termName:             rxvt
 URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.transparent:          false
