@@ -260,7 +260,6 @@ for_window [title=".*Atom"] floating enable
 
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id xbacklight -set 60
-exec_always --no-startup-id xset dpms 600
 exec_always --no-startup-id xflux -g 104.06 -l 30.67
 exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start
 #exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.i3/space-1.json'"

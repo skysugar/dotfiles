@@ -7,6 +7,10 @@ set encoding=utf-8
 set background=dark
 colorscheme solarized
 
+nnoremap <F2> :set invpaste paste?<CR>
+imap <F2> <C-O>:set invpaste paste?<CR>
+set pastetoggle=<F2>
+
 map <C-l> :tabn<cr>             "下一个tab
 map <C-h> :tabp<cr>             "上一个tab
 map <C-n> :tabnew<cr>           "新tab
