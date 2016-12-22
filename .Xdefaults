@@ -38,6 +38,11 @@ URxvt.allow_bold:           true
 URxvt.font:xft:Menlo:bold:pixelsize=12:antialias=true,xft:SimSun:bold:pixelsize=14:antialias=true
 URxvt.boldFont:xft:Menlo:bold:pixelsize=12:antialias=true,xft:SimSun:bold:pixelsize=14:antialias=true
 
+!URxvt*font:                     xft:Monaco:pixelsize=12:antialias=true,xft:STHeiti:pixelsize=12:antialias=true
+!URxvt*boldFont:                 xft:Monaco:pixelsize=12:antialias=true,xft:STHeiti:pixelsize=12:antialias=true
+!URxvt*italicFont:               xft:Monaco:pixelsize=12:antialias=true,xft:STHeiti:pixelsize=12:antialias=true
+!URxvt*bolditalicFont:           xft:Monaco:pixelsize=12:antialias=true,xft:STHeiti:pixelsize=12:antialias=true
+
 ! Fix font space
 URxvt*letterSpace: -1
 
