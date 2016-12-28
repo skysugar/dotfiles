@@ -39,5 +39,5 @@ ${if_match "${acpiacadapter}"=="on-line"}\
 ${else}\
  ${battery_percent BAT1}% \
 ${endif} \
-${time %Y/%m/%d %A %H:%M}
+ ${time %Y/%m/%d %A %H:%M}
 ]]
