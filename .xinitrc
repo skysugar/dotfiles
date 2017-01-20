@@ -7,9 +7,6 @@ export INPUT_METHOD=fcitx
 export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
-#export INPUT_METHOD=xim
-#export GTK_IM_MODULE=xim
-#export QT_IM_MODULE=xim
 export TERM=xterm-256color
 export $(gnome-keyring-daemon -s)
 
