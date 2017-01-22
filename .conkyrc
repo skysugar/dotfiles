@@ -25,15 +25,12 @@ conky.config = {
 }
 
 conky.text = [[
-${if_up enp3s0}\
- ${upspeed enp3s0}/s  ${downspeed enp3s0}/s  ${addr enp3s0} \
-${endif}\
 ${if_up wlp4s0}\
  ${upspeed wlp4s0}/s  ${downspeed wlp4s0}/s  ${addr wlp4s0} \
 ${endif}\
  ${loadavg 1} \
  ${mem} \
- ${fs_used /home} \
+ ${fs_used /} \
 ${if_match "${acpiacadapter}"=="on-line"}\
  \
 ${else}\

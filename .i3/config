@@ -9,168 +9,188 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+##########
+# 基本设置
+##########
+
+# 设置Super键为功能键
 set $mod Mod4
 
-bindsym $mod+t border normal
-bindsym $mod+u border none
-
+# 字体设置
 # font for window titles. ISO 10646 = Unicode
 #font -misc-dejavu sans-medium-r-normal--12-0-0-0-p-0-iso10646-1
 #font -misc-ar pl uming cn-light-r-normal--12-0-0-0-p-0-iso10646-1
 #font -microsoft-microsoft yahei-medium-r-normal--12-0-0-0-p-0-iso10646-1
 #font -misc-hiragino sans gb w3-light-r-normal--0-0-0-0-p-0-iso10646-1
 #font -wenquanyi-wenquanyi bitmap song-medium-r-normal-*-13-130-75-75-p-80-iso10646-1
-font pango:Monacospace 10
+font pango:Monacospace 12
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+# 重新加载I3的配置
+bindsym $mod+Shift+C reload
+# 重启I3
+bindsym $mod+Shift+R restart
+# 退出I3
+bindsym $mod+Shift+E exit
+
+##########
+# 窗口设置
+##########
+
+# 新窗口样式 <normal|1pixel|none>
+new_window 1pixel
+default_orientation auto
+workspace_layout tabbed
+
+# 设置显示窗口标题栏快捷键
+bindsym $mod+t border normal
+# 设置隐藏窗口标题栏快捷键
+bindsym $mod+u border none
+
+# 设置多功能键加鼠标左键拖拽移动窗口位置
 floating_modifier $mod
 
-# start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvtc
-#bindsym $mod+Return exec lilyterm
+# 设置焦点跟随鼠标
+focus_follows_mouse yes
+#focus_follows_mouse no
 
-# kill focused window
+force_focus_wrapping yes
+#force_focus_wrapping no
+
+# 关闭窗口快捷键
 bindsym $mod+Shift+Q kill
 
-# change focus
-#bindsym $mod+j focus left
+# 切换窗口快捷键
 bindsym $mod+h focus left
-#bindsym $mod+k focus down
 bindsym $mod+j focus down
-#bindsym $mod+l focus up
 bindsym $mod+k focus up
-#bindsym $mod+semicolon focus right
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
+# 切换窗口快捷键, 上下左右键
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
-#   bindsym $mod+Shift+J move left
+# 移动窗口的位置
 bindsym $mod+Shift+H move left
-#   bindsym $mod+Shift+K move down
 bindsym $mod+Shift+J move down
-#   bindsym $mod+Shift+L move up
 bindsym $mod+Shift+K move up
-#   bindsym $mod+Shift+colon move right
 bindsym $mod+Shift+L move right
 
-# alternatively, you can use the cursor keys:
+# 移动窗口的位置, 上下左右键
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
+# 新窗口打开方向 在当前窗口右侧
 bindsym $mod+g split h
 
-# split in vertical orientation
+# 新窗口打开方向 在当前窗口下方
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
+# 全屏一个窗口
 bindsym $mod+f fullscreen
 
-# change container layout (stacked, tabbed, default)
+# 设置窗口展示方式，stacking是堆叠式，tabbed是标签式 以及默认方式
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout default
 
-# toggle tiling / floating
+# 切换窗口为平铺还是漂浮模式
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
+# 在平铺和漂浮窗口中切换
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
+# 将当前打开方式变成一个容器，在打开新窗口以上一个展示方式打开
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindcode $mod+d focus child
+# 设置功能键 + 左右括号 切换工作区
+bindsym $mod+bracketleft focus left
+bindsym $mod+bracketright focus right
+# 设置功能键 + Shift + 左右括号 将窗口移动到工作区
+bindsym $mod+Shift+bracketleft move container to workspace prev
+bindsym $mod+Shift+bracketright move container to workspace next
 
-# switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+# 功能键+Shift+减号 藏起来一个窗口
+bindsym $mod+Shift+minus move scratchpad
+# 显示藏起来的第一个窗口
+bindsym $mod+minus scratchpad show
 
-# move focused container to workspace
-bindsym $mod+Shift+exclam move container to workspace 1
-bindsym $mod+Shift+at move container to workspace 2
-bindsym $mod+Shift+numbersign move container to workspace 3
-bindsym $mod+Shift+dollar move container to workspace 4
-bindsym $mod+Shift+percent move container to workspace 5
-bindsym $mod+Shift+asciicircum move container to workspace 6
-bindsym $mod+Shift+ampersand move container to workspace 7
-bindsym $mod+Shift+asterisk move container to workspace 8
-bindsym $mod+Shift+parenleft move container to workspace 9
-bindsym $mod+Shift+parenright move container to workspace 10
+# 切换窗口, alt + table 左右, 功能键+table 上下
+bindsym Mod1+Tab focus left
+bindsym $mod+Tab focus up
 
-# reload the configuration file
-bindsym $mod+Shift+C reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+R restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+E exit
+# 在当前和上一个工作区直接切换
+bindsym $mod+b workspace back_and_forth
+bindsym $mod+grave workspace back_and_forth
 
-## default setting
-# new_window <normal|1pixel|none>
-new_window 1pixel
-#new_window normal
-default_orientation auto
-workspace_layout tabbed
-# colorclass border background text indicator
+###########
+# 工作区设置
+###########
 
-# resize window (you can also use the mouse for that)
+# 定义工作区名字
+set $WS1 1
+set $WS2 2
+set $WS3 3
+set $WS4 4
+set $WS5 5
+set $WS6 6
+set $WS7 7
+set $WS8 8
+set $WS9 9
+set $WS10 10
+
+# 切换工作区
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
+bindsym $mod+5 workspace $WS5
+bindsym $mod+6 workspace $WS6
+bindsym $mod+7 workspace $WS7
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+bindsym $mod+0 workspace $WS10
+
+# 将窗口移动到对应的工作区
+bindsym $mod+Shift+exclam move container to workspace $WS1
+bindsym $mod+Shift+at move container to workspace $WS2
+bindsym $mod+Shift+numbersign move container to workspace $WS3
+bindsym $mod+Shift+dollar move container to workspace $WS4
+bindsym $mod+Shift+percent move container to workspace $WS5
+bindsym $mod+Shift+asciicircum move container to workspace $WS6
+bindsym $mod+Shift+ampersand move container to workspace $WS7
+bindsym $mod+Shift+asterisk move container to workspace $WS8
+bindsym $mod+Shift+parenleft move container to workspace $WS9
+bindsym $mod+Shift+parenright move container to workspace $WS10
+
+# 调整窗口大小
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        #bindsym j resize shrink width 10 px or 10 ppt
         bindsym h resize shrink width 10 px or 10 ppt
-        #bindsym k resize grow height 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
-        #bindsym l resize shrink height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
-        #bindsym semicolon resize grow width 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-#       bindsym 113 resize shrink width 10 px or 10 ppt
-#       bindsym 116 resize grow height 10 px or 10 ppt
-#       bindsym 111 resize shrink height 10 px or 10 ppt
-#       bindsym 114 resize grow width 10 px or 10 ppt
-        # same bindings, but for the arrow keys
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
+        bindsym Left  resize shrink width 10 px or 10 ppt
+        bindsym Down  resize grow height 10 px or 10 ppt
+        bindsym Up    resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
+# 设置调整窗口大小快捷键
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# i3bar 设置
 bar {
         colors {
-        # Show status text in light blue color
             statusline #F09000
+            background #000000
         }
 
         position top
@@ -178,61 +198,24 @@ bar {
         #status_command i3status
 }
 
+###########
+# 快捷键设置
+###########
 
-#-------------------------------------------------
-#bindsym $mod+r exec gmrun
-## launcher app
-##
-#bindsym Mod1+Shift+r exec gmrun
+# 多功能键 + 回车  启动一个终端
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvtc
+
+## 启动一些程序快捷键
 bindsym Mod1+Shift+r exec rofi -show run
 bindsym Mod1+Shift+s exec rofi -show ssh
 bindsym Mod1+Shift+w exec rofi -show window
-#------------------------------------------
-#Alt + [ or ] switch workspace
-bindsym Mod1+bracketleft workspace prev
-bindsym Mod1+bracketright workspace next
-#
-#bindsym $mod+bracketleft workspace prev
-#bindsym $mod+bracketright workspace next
 
-bindsym $mod+bracketleft focus left
-bindsym $mod+bracketright focus right
-
-
-bindsym $mod+Shift+bracketleft move container to workspace prev
-bindsym $mod+Shift+bracketright move container to workspace next
-
-#bindsym $mod+Shift+c kill
-
-#bindsym Mod1+Shift+i exec --no-startup-id firefox
 bindsym Mod1+Shift+i exec --no-startup-id google-chrome-stable
 bindsym Mod1+Shift+e exec --no-startup-id xfe
 bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000000
 
-focus_follows_mouse yes
-#focus_follows_mouse no
-
-#force_focus_wrapping yes
-force_focus_wrapping no
-
-
-# Make the currently focused window a scratchpad
-bindsym $mod+Shift+minus move scratchpad
-# Show the first scratchpad window
-bindsym $mod+minus scratchpad show
-
-bindsym Mod1+Tab focus left
-bindsym $mod+Tab focus up
-
-
-
-# focus the child container
-#bindcode $mod+d focus child
-bindsym $mod+c focus child
-
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+grave workspace back_and_forth
-
+# 设置一些程序用飘浮模式打开
 #for_window [class="xpad"] floating enable
 #for_window [class="xterm"] floating enable
 for_window [class="Wireshark.*"] floating enable
@@ -255,11 +238,8 @@ for_window [title=".*Sublime Text"] floating enable
 for_window [title=".*Atom"] floating enable
 #for_window [title=".*Cloud Music"] floating enable
 
-#exec xfce4-panel
-#exec xmodmap ~/.Xmodmap
-
-exec_always --no-startup-id numlockx on
-exec_always --no-startup-id xbacklight -set 60
+# 进入i3后，设置一些启动程序
+#exec_always --no-startup-id numlockx on
+#exec_always --no-startup-id xbacklight -set 60
 exec_always --no-startup-id xflux -g 104.06 -l 30.67
-exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start
 #exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.i3/space-1.json'"
