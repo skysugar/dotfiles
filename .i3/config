@@ -25,6 +25,16 @@ set $mod Mod4
 #font -wenquanyi-wenquanyi bitmap song-medium-r-normal-*-13-130-75-75-p-80-iso10646-1
 font pango:Monacospace 12
 
+# 主题
+# class                 border  backgr. text    indicator child_border
+#client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+#client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
 # 重新加载I3的配置
 bindsym $mod+Shift+C reload
 # 重启I3
@@ -100,7 +110,7 @@ bindsym $mod+e layout default
 # 切换窗口为平铺还是漂浮模式
 bindsym $mod+Shift+space floating toggle
 
-# 在平铺和漂浮窗口中切换
+# 在平铺和漂浮窗口中切换焦点
 bindsym $mod+space focus mode_toggle
 
 # 将当前打开方式变成一个容器，在打开新窗口以上一个展示方式打开
@@ -131,16 +141,16 @@ bindsym $mod+grave workspace back_and_forth
 ###########
 
 # 定义工作区名字
-set $WS1 1
-set $WS2 2
-set $WS3 3
-set $WS4 4
-set $WS5 5
-set $WS6 6
-set $WS7 7
-set $WS8 8
-set $WS9 9
-set $WS10 10
+set $WS1 1:壹
+set $WS2 2:贰
+set $WS3 3:叁
+set $WS4 4:肆
+set $WS5 5:伍
+set $WS6 6:陆
+set $WS7 7:柒
+set $WS8 8:捌
+set $WS9 9:玖
+set $WS10 10:拾
 
 # 切换工作区
 bindsym $mod+1 workspace $WS1
@@ -188,14 +198,24 @@ bindsym $mod+r mode "resize"
 
 # i3bar 设置
 bar {
-        colors {
-            statusline #F09000
-            background #000000
-        }
-
         position top
         status_command conky -c ~/.conkyrc
         #status_command i3status
+        font pango:Monacospace 12
+
+        colors {
+          statusline #F09000
+          #statusline #ffffff
+          background #000000
+          separator  #666666
+
+          #<colorclass> <border> <background> <text>
+          focused_workspace  #4c7899 #285577 #ffffff
+          active_workspace   #333333 #5f676a #ffffff
+          inactive_workspace #333333 #222222 #888888
+          urgent_workspace   #2f343a #900000 #ffffff
+          binding_mode       #2f343a #900000 #ffffff
+        }
 }
 
 ###########
@@ -236,10 +256,11 @@ for_window [title="Python.*Shell"] floating enable
 for_window [title="X[Cc]hat.*"] floating enable
 for_window [title=".*Sublime Text"] floating enable
 for_window [title=".*Atom"] floating enable
+for_window [title=".*WeChat$"] floating enable
 #for_window [title=".*Cloud Music"] floating enable
 
 # 进入i3后，设置一些启动程序
 #exec_always --no-startup-id numlockx on
 #exec_always --no-startup-id xbacklight -set 60
-exec_always --no-startup-id xflux -g 104.06 -l 30.67
+exec --no-startup-id xflux -g 104.06 -l 30.67
 #exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.i3/space-1.json'"
