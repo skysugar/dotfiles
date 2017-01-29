@@ -32,9 +32,9 @@ ${endif}\
  ${mem} \
  ${fs_used /} \
 ${if_match "${acpiacadapter}"=="on-line"}\
- \
+ ${battery_percent BAT0}% \
 ${else}\
- ${battery_percent BAT1}% \
+ ${battery_percent BAT0}% \
 ${endif} \
  ${time %Y/%m/%d %A %H:%M}
 ]]
