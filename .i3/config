@@ -16,21 +16,20 @@
 # 设置Super键为功能键
 set $mod Mod4
 
+# 设置gaps
+#smart_gaps on | no_gaps
+gaps inner 2
+gaps outer 0
+
 # 字体设置
-# font for window titles. ISO 10646 = Unicode
-#font -misc-dejavu sans-medium-r-normal--12-0-0-0-p-0-iso10646-1
-#font -misc-ar pl uming cn-light-r-normal--12-0-0-0-p-0-iso10646-1
-#font -microsoft-microsoft yahei-medium-r-normal--12-0-0-0-p-0-iso10646-1
-#font -misc-hiragino sans gb w3-light-r-normal--0-0-0-0-p-0-iso10646-1
-#font -wenquanyi-wenquanyi bitmap song-medium-r-normal-*-13-130-75-75-p-80-iso10646-1
 font pango:Monacospace 12
 
 # 主题
 # class                 border  backgr. text    indicator child_border
-client.focused          #e8e8e8 #e8e8e8 #000000 #ef0202   #ef0202
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #a5a2a2 #6d6969 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.focused          #e8e8e8 #e8e8e8 #000000 #9F35FF   #82D900
+client.focused_inactive #c6c2c2 #c6c2c2 #000000 #c6c2c2   #c6c2c2
+client.unfocused        #c6c2c2 #c6c2c2 #000000 #c6c2c2   #c6c2c2
+client.urgent           #ff0000 #ff0000 #000000 #ff0000   #ff0000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
@@ -254,7 +253,7 @@ for_window [title=".*GParted"] floating enable
 for_window [title="Python.*Shell"] floating enable
 for_window [title="X[Cc]hat.*"] floating enable
 for_window [title=".*Sublime Text"] floating enable
-for_window [title=".*Atom"] floating enable
+#for_window [title=".*Atom"] floating enable
 for_window [title=".*WeChat$"] floating enable
 #for_window [title=".*Cloud Music"] floating enable
 
