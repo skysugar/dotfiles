@@ -261,4 +261,10 @@ for_window [title=".*WeChat$"] floating enable
 #exec_always --no-startup-id numlockx on
 #exec_always --no-startup-id xbacklight -set 60
 exec --no-startup-id xflux -g 104.06 -l 30.67
+exec --no-startup-id nm-applet
+exec --no-startup-id fcitx -d
+exec --no-startup-id volumeicon
+exec --no-startup-id /usr/bin/urxvtd -q -f -o
+exec --no-startup-id /usr/bin/feh --bg-scale ~/dotfiles/wallpapers/get_away_from_my_computer-wallpaper-1920x1080.png
+exec --no-startup-id xrdb -merge -I$HOME ~/.Xresources
 #exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.i3/space-1.json'"
