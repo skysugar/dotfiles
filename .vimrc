@@ -4,8 +4,8 @@ filetype plugin indent on
 
 set nu
 set encoding=utf-8
-set background=dark
-colorscheme solarized
+"set background=dark
+"colorscheme solarized
 
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
