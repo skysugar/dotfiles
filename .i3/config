@@ -258,8 +258,8 @@ for_window [title=".*WeChat$"] floating enable
 #for_window [title=".*Cloud Music"] floating enable
 
 # 进入i3后，设置一些启动程序
-#exec_always --no-startup-id numlockx on
-#exec_always --no-startup-id xbacklight -set 60
+exec_always --no-startup-id numlockx on
+exec_always --no-startup-id xbacklight -set 60
 exec --no-startup-id xflux -g 104.06 -l 30.67
 exec --no-startup-id nm-applet
 exec --no-startup-id fcitx -d
