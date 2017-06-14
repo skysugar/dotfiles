@@ -31,10 +31,10 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:       true
-URxvt*font:             xft:Monaco:pixelsize=14:antialias=true,xft:STHeiti:pixelsize=14:antialias=true
-URxvt*boldFont:         xft:Monaco:pixelsize=14:antialias=true,xft:STHeiti:pixelsize=14:antialias=true
-URxvt*italicFont:       xft:Monaco:pixelsize=14:antialias=true,xft:STHeiti:pixelsize=14:antialias=true
-URxvt*bolditalicFont:   xft:Monaco:pixelsize=14:antialias=true,xft:STHeiti:pixelsize=14:antialias=true
+URxvt*font:             xft:Monaco:pixelsize=12:antialias=true,xft:STHeiti:pixelsize=12:antialias=true
+URxvt*boldFont:         xft:Monaco:pixelsize=12:antialias=true,xft:STHeiti:pixelsize=12:antialias=true
+URxvt*italicFont:       xft:Monaco:pixelsize=12:antialias=true,xft:STHeiti:pixelsize=12:antialias=true
+URxvt*bolditalicFont:   xft:Monaco:pixelsize=12:antialias=true,xft:STHeiti:pixelsize=12:antialias=true
 
 ! Fix font space
 URxvt*letterSpace: 0

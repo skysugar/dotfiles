@@ -22,7 +22,7 @@ gaps inner 2
 gaps outer 0
 
 # 字体设置
-font pango:Monacospace 12
+font pango:Monacospace 10
 
 # 主题
 # class                 border  backgr. text    indicator child_border
@@ -200,7 +200,7 @@ bar {
         position top
         status_command conky -c ~/.conkyrc
         #status_command i3status
-        font pango:Monacospace 12
+        font pango:Monacospace 10
 
         colors {
           statusline #5b5b5b
