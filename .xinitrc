@@ -10,10 +10,7 @@ export QT_IM_MODULE=fcitx
 export TERM=xterm-256color
 export $(gnome-keyring-daemon -s)
 
-## left hand
-#xmodmap -e "pointer = 3 2 1 4 5"
-## right hand
-#xmodmap -e "pointer = 1 2 3 4 5"
+
 ## vertical screen 0 1 2 3
 #xrandr -o 0
 # double screen
@@ -32,4 +29,5 @@ xset b off
 #[ -f /usr/bin/feh ] && /usr/bin/feh --bg-scale ~/dotfiles/wallpapers/get_away_from_my_computer-wallpaper-1920x1080.png &
 #[ -f ~/.Xresources ] && xrdb -merge -I$HOME ~/.Xresources
 #[ -f /usr/bin/xcompmgr ] && /usr/bin/xcompmgr -fnc &
+[ -f $HOME/.Xmodmap ] && /usr/bin/xmodmap $HOME/.Xmodmap
 [ -f /usr/bin/i3 ] && exec /usr/bin/i3
