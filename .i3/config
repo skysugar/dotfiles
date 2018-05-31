@@ -200,7 +200,7 @@ bar {
         position top
         status_command conky -c ~/.conkyrc
         #status_command i3status
-        font pango:Monacospace 10
+        font pango:Monacospace 12
 
         colors {
           statusline #5b5b5b
@@ -238,6 +238,7 @@ bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000000
 #for_window [class="xterm"] floating enable
 for_window [class="Wireshark.*"] floating enable
 for_window [class=".*Shadowsocks.*"] floating enable
+for_window [class=".*Telegram.*"] floating enable
 for_window [title=".*SMPlayer"] floating enable
 for_window [title=".*Mousepad"] floating enable
 for_window [title="feh.*"] floating enable
@@ -248,7 +249,7 @@ for_window [title="PointDownload"] floating enable
 for_window [title="edb.*"] floating enable
 for_window [title="CherryTree.*"] floating enable
 for_window [title=".*Skype.*"] floating enable
-for_window [title=".*VirtualBox.*"] floating enable
+#for_window [title=".*VirtualBox.*"] floating enable
 for_window [title=".*GParted"] floating enable
 for_window [title="Python.*Shell"] floating enable
 for_window [title="X[Cc]hat.*"] floating enable
@@ -258,8 +259,8 @@ for_window [title=".*WeChat$"] floating enable
 #for_window [title=".*Cloud Music"] floating enable
 
 # 进入i3后，设置一些启动程序
-exec_always --no-startup-id numlockx on
-exec_always --no-startup-id xbacklight -set 60
+#exec_always --no-startup-id numlockx on
+exec_always --no-startup-id xbacklight -set 50
 exec --no-startup-id xflux -g 104.06 -l 30.67
 exec --no-startup-id nm-applet
 exec --no-startup-id fcitx -d

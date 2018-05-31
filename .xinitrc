@@ -29,5 +29,5 @@ xset b off
 #[ -f /usr/bin/feh ] && /usr/bin/feh --bg-scale ~/dotfiles/wallpapers/get_away_from_my_computer-wallpaper-1920x1080.png &
 #[ -f ~/.Xresources ] && xrdb -merge -I$HOME ~/.Xresources
 #[ -f /usr/bin/xcompmgr ] && /usr/bin/xcompmgr -fnc &
-[ -f $HOME/.Xmodmap ] && /usr/bin/xmodmap $HOME/.Xmodmap
+#[ -f $HOME/.Xmodmap ] && /usr/bin/xmodmap $HOME/.Xmodmap
 [ -f /usr/bin/i3 ] && exec /usr/bin/i3

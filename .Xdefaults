@@ -58,4 +58,4 @@ URxvt.cursorColor:          #657b83
 URxvt.cursorUnderline:      false
 
 ! Pointer
-URxvt.pointerBlank:         true0
+URxvt.pointerBlank:         true
