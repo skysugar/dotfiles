@@ -222,7 +222,8 @@ bar {
 
 # 多功能键 + 回车  启动一个终端
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvtc
+#bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec termite
 
 ## 启动一些程序快捷键
 bindsym Mod1+Shift+r exec rofi -show run
@@ -261,11 +262,11 @@ for_window [title=".*WeChat$"] floating enable
 # 进入i3后，设置一些启动程序
 #exec_always --no-startup-id numlockx on
 exec_always --no-startup-id xbacklight -set 50
-exec --no-startup-id xflux -g 104.06 -l 30.67
+exec --no-startup-id xflux -g 114.05 -l 22.38
 exec --no-startup-id nm-applet
 exec --no-startup-id fcitx -d
 exec --no-startup-id volumeicon
-exec --no-startup-id /usr/bin/urxvtd -q -f -o
+#exec --no-startup-id /usr/bin/urxvtd -q -f -o
 exec --no-startup-id /usr/bin/feh --bg-scale ~/dotfiles/wallpapers/get_away_from_my_computer-wallpaper-1920x1080.png
 exec --no-startup-id xrdb -merge -I$HOME ~/.Xresources
 #exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.i3/space-1.json'"

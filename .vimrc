@@ -2,8 +2,12 @@ execute pathogen#infect()
 syntax enable
 filetype plugin indent on
 
-set nu
+set number
 set encoding=utf-8
+set shiftwidth=2
+set ruler
+set incsearch
+set hlsearch
 "set background=dark
 "colorscheme solarized
 
@@ -34,8 +38,3 @@ let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 " 显示书签列表
 let NERDTreeShowBookmarks=1
-
-"pydiction 1.2 python auto complete
-let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
-""defalut g:pydiction_menu_height == 15
-"let g:pydiction_menu_height = 20

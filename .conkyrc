@@ -26,18 +26,18 @@ conky.config = {
 
 conky.text = [[
 ${if_up enp3s0}\
- ${upspeed enp3s0}/s  ${downspeed enp3s0}/s  ${addr enp3s0}\
+${upspeed enp3s0}/s ${downspeed enp3s0}/s ${addr enp3s0}\
 ${endif}\
 ${if_up wlp2s0}\
-${upspeed wlp2s0}/s ${downspeed wlp2s0}/s ${addr wlp2s0}\
+${upspeed wlp2s0}/s ${downspeed wlp2s0}/s ${wireless_essid}[${wireless_link_qual_perc wlp2s0}%]:${addr wlp2s0}\
 ${endif}\
-${loadavg 1}\
-${mem}\
-${fs_used /}\
+ ${loadavg 1}\
+ ${mem}\
+ ${fs_used /}\
 ${if_match "${acpiacadapter}" == "on-line"}\
-${battery_percent}%\
+ ${battery_percent}%\
 ${else}\
-${battery_percent}%\
+ ${battery_percent}%\
 ${endif}\
-${time %Y/%m/%d %A %H:%M}
+ ${time %Y/%m/%d %A %H:%M}
 ]]

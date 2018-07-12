@@ -8,6 +8,11 @@
 !rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
 !rofi.terminal: lilyterm
 rofi.font: Terminus 9
+rofi.terminal: termite
+rofi.ssh-client: ssh
+rofi.ssh-command: {terminal} -e "{ssh-client} {host}"
+rofi.run-command: {cmd}
+rofi.run-shell-command: {terminal} -e {cmd}
 !rofi.fg: #839496
 !rofi.bg: #121212
 !rofi.bgalt: #121212
