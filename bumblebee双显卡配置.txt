@@ -6,7 +6,7 @@ pacman -S mesa
 pacman -S nvdia
 pacman -S xf86-video-intel
 gpasswd -a $USER bumblebee
-systemctrl enable bumblebee.d.service
+systemctrl enable bumblebeed.service
 pacman -S mesa-demos
 optirun glxgears -info
 pacman -S bbswitch
