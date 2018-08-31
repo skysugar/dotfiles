@@ -195,6 +195,11 @@ mode "resize" {
 # 设置调整窗口大小快捷键
 bindsym $mod+r mode "resize"
 
+# 声音快捷键
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 0 -q set Master 2dB- unmute
+bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+
 # i3bar 设置
 bar {
         position top
