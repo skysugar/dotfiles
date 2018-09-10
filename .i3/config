@@ -203,9 +203,14 @@ bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 # i3bar 设置
 bar {
         position top
-        status_command conky -c ~/.conkyrc
-        #status_command i3status
         font pango:Monacospace 12
+        strip_workspace_numbers yes
+        #i3bar_command i3bar -t
+        #height 26
+        #status_command conky -c ~/.conkyrc
+        status_command $HOME/.i3/conky-i3bar
+        #status_command i3status
+
 
         colors {
           statusline #5b5b5b
@@ -242,7 +247,7 @@ bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000000
 # 设置一些程序用飘浮模式打开
 #for_window [class="xpad"] floating enable
 #for_window [class="xterm"] floating enable
-for_window [class="Wireshark.*"] floating enable
+for_window [class="wireshark"] floating enable
 for_window [class=".*Shadowsocks.*"] floating enable
 for_window [class=".*Telegram.*"] floating enable
 for_window [title=".*SMPlayer"] floating enable
@@ -274,4 +279,3 @@ exec --no-startup-id volumeicon
 #exec --no-startup-id /usr/bin/urxvtd -q -f -o
 exec --no-startup-id /usr/bin/feh --bg-scale ~/dotfiles/wallpapers/get_away_from_my_computer-wallpaper-1920x1080.png
 exec --no-startup-id xrdb -merge -I$HOME ~/.Xresources
-#exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.i3/space-1.json'"
