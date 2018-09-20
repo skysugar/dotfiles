@@ -1,7 +1,3 @@
--- ===================================================================
---                            conky_bar
--- ===================================================================
-
 conky.config = {
 
     -- 不输出到X
@@ -26,10 +22,11 @@ conky.config = {
 
 conky.text = [[
 [
+
 { "full_text": "${if_up wlp2s0}\
  ${upspeed wlp2s0}/s  ${downspeed wlp2s0}/s  ${wireless_essid}[${wireless_link_qual_perc wlp2s0}%]:${addr wlp2s0}\
 ${else}\
-down\
+ Network Down\
 ${endif}",\
 "color":\
 "${if_up wlp2s0}\#5b5b5b${else}\#ffffff${endif}" },
@@ -40,14 +37,16 @@ ${endif}",\
 { "full_text": " ${fs_used /}", "color": "\#5b5b5b" },
 
 { "full_text": "${if_match "${acpiacadapter}" == "on-line"}\
- ${battery_percent}%\
+ ${battery_bar BAT0} ${battery_percent}%\
 ${else}\
- ${battery_percent}%\
+ ${battery_bar BAT0} ${battery_percent}%\
 ${endif}",\
 "color": "\#5b5b5b" },
 
-{ "full_text": " ${time %Y/%m/%d %A}", "color": "\#5b5b5b"  },
-{ "full_text": " ${time %H:%M}", "color": "\#5b5b5b"  }
+{ "full_text": " ${execbar amixer get Master -M | grep -oE '[0-9]*%' | tr -d '%'} ${exec amixer get Master -M | grep -oE '[0-9]*%'}", "color": "\#5b5b5b" },
+{ "full_text": " ${time %Y/%m/%d %A}", "color": "\#5b5b5b" },
+{ "full_text": " ${time %H:%M}", "color": "\#5b5b5b" }
+
 ],
 ]];
 
