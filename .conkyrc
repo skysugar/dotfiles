@@ -50,12 +50,16 @@ ${endif}",\
 
 { "full_text": " ${execbar amixer get Master -M | grep -oE '[0-9]*%' | tr -d '%'} ${exec amixer get Master -M | grep -oE '[0-9]*%'}", "color": "\#5b5b5b" },
 
-{ "full_text": "${if_mpd_playing} ♪ ${mpd_smart} ${mpd_bar} ${endif}", "color": "\#5b5b5b" },
+{ "full_text": "${if_mpd_playing}\
+${if_match "${mpd_status}"=="MPD not responding"}\
+${else}\
+♪ ${mpd_smart} ${mpd_bar}\
+${endif}\
+${endif}",\
+ "color": "\#5b5b5b" },
 
 { "full_text": " ${time %Y/%m/%d %A}", "color": "\#5b5b5b" },
 { "full_text": " ${time %H:%M}", "color": "\#5b5b5b" }
 
 ],
 ]];
-
-
