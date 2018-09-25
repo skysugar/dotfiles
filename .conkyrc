@@ -16,7 +16,10 @@ conky.config = {
     -- 监视端口
     if_up_strictness = 'address',
     -- cpu数据监测模式，一般选2
-    cpu_avg_samples = 2
+    cpu_avg_samples = 2,
+    -- mpd config
+    mpd_host = localhost,
+    mpd_port = 6600
 
 }
 
@@ -43,7 +46,12 @@ ${else}\
 ${endif}",\
 "color": "\#5b5b5b" },
 
+#{ "full_text": " ${execibar 5 cat /sys/class/backlight/intel_backlight/brightness | cut -c 1,2} ${execi 5 cat /sys/class/backlight/intel_backlight/brightness | cut -c 1,2}%", "color": "\#5b5b5b" },
+
 { "full_text": " ${execbar amixer get Master -M | grep -oE '[0-9]*%' | tr -d '%'} ${exec amixer get Master -M | grep -oE '[0-9]*%'}", "color": "\#5b5b5b" },
+
+{ "full_text": "${if_mpd_playing} ♪ ${mpd_smart} ${mpd_bar} ${endif}", "color": "\#5b5b5b" },
+
 { "full_text": " ${time %Y/%m/%d %A}", "color": "\#5b5b5b" },
 { "full_text": " ${time %H:%M}", "color": "\#5b5b5b" }
 
