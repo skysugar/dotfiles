@@ -243,18 +243,18 @@ bindsym Mod1+Shift+w exec rofi -show window
 
 bindsym Mod1+Shift+i exec --no-startup-id google-chrome-stable
 bindsym Mod1+Shift+e exec --no-startup-id xfe
-bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000000
+bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.i3/lockscreen.sh
 
 # 设置一些程序用飘浮模式打开
 #for_window [class="xpad"] floating enable
 #for_window [class="xterm"] floating enable
-for_window [class="wireshark"] floating enable
+for_window [class="Wireshark"] floating enable
 for_window [class=".*Shadowsocks.*"] floating enable
-for_window [class=".*Telegram.*"] floating enable
+for_window [class=".*TelegramDesktop"] floating enable
 for_window [title=".*SMPlayer"] floating enable
 for_window [title=".*Mousepad"] floating enable
-for_window [title="feh.*"] floating enable
-for_window [title="Steam"] floating enable
+for_window [class="feh"] floating enable
+for_window [class="Steam"] floating enable
 for_window [title="Xf.*"] floating enable
 for_window [title=".*GIMP"] floating enable
 for_window [title="PointDownload"] floating enable
