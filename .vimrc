@@ -38,3 +38,6 @@ let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 " 显示书签列表
 let NERDTreeShowBookmarks=1
+
+" 启动powerline插件
+let g:powerline_pycmd="py3"

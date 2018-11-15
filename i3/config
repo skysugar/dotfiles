@@ -209,7 +209,7 @@ bar {
         #i3bar_command i3bar -t
         #height 26
         #status_command conky -c ~/.conkyrc
-        status_command $HOME/.i3/conky-i3bar
+        status_command $HOME/.config/i3/conky-i3bar
         #status_command i3status
 
 
@@ -242,19 +242,21 @@ bindsym Mod1+Shift+s exec rofi -show ssh
 bindsym Mod1+Shift+w exec rofi -show window
 
 bindsym Mod1+Shift+i exec --no-startup-id google-chrome-stable
-bindsym Mod1+Shift+e exec --no-startup-id xfe
-bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.i3/lockscreen.sh
+bindsym Mod1+Shift+e exec --no-startup-id thunar
+bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.config/i3/lockscreen.sh
 
 # 设置一些程序用飘浮模式打开
 #for_window [class="xpad"] floating enable
 #for_window [class="xterm"] floating enable
 for_window [class="Wireshark"] floating enable
 for_window [class=".*Shadowsocks.*"] floating enable
+for_window [class="wewechat"] floating enable
 for_window [class=".*TelegramDesktop"] floating enable
 for_window [title=".*SMPlayer"] floating enable
 for_window [title=".*Mousepad"] floating enable
 for_window [class="feh"] floating enable
 for_window [class="Steam"] floating enable
+for_window [class="Thunar"] floating enable
 for_window [title="Xf.*"] floating enable
 for_window [title=".*GIMP"] floating enable
 for_window [title="PointDownload"] floating enable
