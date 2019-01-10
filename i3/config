@@ -257,6 +257,8 @@ for_window [title=".*Mousepad"] floating enable
 for_window [class="feh"] floating enable
 for_window [class="Steam"] floating enable
 for_window [class="Thunar"] floating enable
+for_window [class="netease-cloud-music"] floating enable
+for_window [class="Genymotion"] floating enable
 for_window [title="Xf.*"] floating enable
 for_window [title=".*GIMP"] floating enable
 for_window [title="PointDownload"] floating enable
@@ -270,7 +272,6 @@ for_window [title="X[Cc]hat.*"] floating enable
 for_window [title=".*Sublime Text"] floating enable
 #for_window [title=".*Atom"] floating enable
 for_window [title=".*WeChat$"] floating enable
-#for_window [title=".*Cloud Music"] floating enable
 
 # 进入i3后，设置一些启动程序
 #exec_always --no-startup-id numlockx on

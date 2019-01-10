@@ -25,9 +25,10 @@ conky.config = {
 
 conky.text = [[
 [
+{ "full_text": " ${exec xdotool getactivewindow getwindowname || echo -en None}", "color": "\#5b5b5b" },
 
 { "full_text": "${if_up wlp2s0}\
- ${upspeed wlp2s0}/s  ${downspeed wlp2s0}/s  ${wireless_essid}[${wireless_link_qual_perc wlp2s0}%]:${addr wlp2s0}\
+ ${upspeed wlp2s0}/s  ${downspeed wlp2s0}/s  ${wireless_essid wlp2s0}[${wireless_link_qual_perc wlp2s0}%]:${addr wlp2s0}\
 ${else}\
  Network Down\
 ${endif}",\
