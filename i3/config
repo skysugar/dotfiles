@@ -244,6 +244,7 @@ bindsym Mod1+Shift+w exec rofi -show window
 bindsym Mod1+Shift+i exec --no-startup-id google-chrome-stable
 bindsym Mod1+Shift+e exec --no-startup-id thunar
 bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.config/i3/lockscreen.sh
+bindsym Mod1+Ctrl+a exec --no-startup-id deepin-screenshot -s ~/Pictures/screenshot/
 
 # 设置一些程序用飘浮模式打开
 #for_window [class="xpad"] floating enable
