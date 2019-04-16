@@ -18,8 +18,8 @@ set pastetoggle=<F2>
 map <C-l> :tabn<cr>             "下一个tab
 map <C-h> :tabp<cr>             "上一个tab
 map <C-n> :tabnew<cr>           "新tab
-map <C-k> :bn<cr>               "下一个文件
-map <C-j> :bp<cr>               "上一个文件
+map <C-j> :bn<cr>               "下一个文件
+map <C-k> :bp<cr>               "上一个文件
 
 let g:nerdtree_tabs_open_on_console_startup=1       "设置打开vim的时候默认打开目录树
 
