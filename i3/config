@@ -238,6 +238,7 @@ bindsym $mod+Return exec termite
 
 ## 启动一些程序快捷键
 bindsym Mod1+Shift+r exec rofi -show run
+bindsym Mod1+Shift+d exec rofi -show drun
 bindsym Mod1+Shift+s exec rofi -show ssh
 bindsym Mod1+Shift+w exec rofi -show window
 
