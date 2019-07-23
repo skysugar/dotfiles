@@ -18,7 +18,7 @@ export $(gnome-keyring-daemon -s)
 #xrandr --output DVI-0 --auto --pos 0x0 --output DisplayPort-0 --auto --right-of DVI-0
 #xrandr --output HDMI1 --mode 1920x1080 --pos 0x0 --output VGA1 --auto --left-of HDMI1
 
-xset -dpms 300
+xset dpms 300
 xset s off
 xset b off
 

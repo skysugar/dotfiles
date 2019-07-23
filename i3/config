@@ -243,7 +243,7 @@ bindsym Mod1+Shift+s exec rofi -show ssh
 bindsym Mod1+Shift+w exec rofi -show window
 
 bindsym Mod1+Shift+i exec --no-startup-id google-chrome-stable
-bindsym Mod1+Shift+e exec --no-startup-id thunar
+bindsym Mod1+Shift+e exec --no-startup-id pcmanfm
 bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.config/i3/lockscreen.sh
 bindsym Mod1+Ctrl+a exec --no-startup-id deepin-screenshot -s ~/Pictures/screenshot/
 
