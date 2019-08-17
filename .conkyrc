@@ -37,10 +37,10 @@ ${endif}",\
 
 { "full_text": " ${loadavg 1}", "color": "\#5b5b5b" },
 
-{ "full_text": "${mem}", "color": "\#5b5b5b" },
+{ "full_text": " ${mem}", "color": "\#5b5b5b" },
 { "full_text": " ${fs_used /}", "color": "\#5b5b5b" },
 
-{ "full_text": "${if_match "${acpiacadapter}" == "on-line"}\
+{ "full_text": "${if_match "${acpiacadapter ADP0}" == "on-line"}\
  ${battery_bar BAT0} ${battery_percent}%\
 ${else}\
  ${battery_bar BAT0} ${battery_percent}%\
@@ -59,8 +59,8 @@ ${endif}",\
 #${endif}",\
 # "color": "\#5b5b5b" },
 
-{ "full_text": "${time %Y/%m/%d %A}", "color": "\#5b5b5b" },
-{ "full_text": "${time %H:%M}", "color": "\#5b5b5b" }
+{ "full_text": " ${time %Y/%m/%d %A}", "color": "\#5b5b5b" },
+{ "full_text": " ${time %H:%M}", "color": "\#5b5b5b" }
 
 ],
 ]];

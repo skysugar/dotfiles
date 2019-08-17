@@ -21,8 +21,8 @@ map <C-n> :tabnew<cr>           "新tab
 map <C-j> :bn<cr>               "下一个文件
 map <C-k> :bp<cr>               "上一个文件
 
-let g:nerdtree_tabs_open_on_console_startup=1       "设置打开vim的时候默认打开目录树
-
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "设置打开/关闭目录树的快捷键
 nnoremap <F10> :exe 'NERDTreeToggle'<CR>
 " 显示行号

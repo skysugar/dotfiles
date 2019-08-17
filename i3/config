@@ -203,7 +203,8 @@ bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 # i3bar 设置
 bar {
         position top
-        font pango:Monacospace 12
+        #font pango:Monacospace 12
+        font pango:NotoSans Nerd Font 12
         strip_workspace_numbers yes
         #tray_output none
         #i3bar_command i3bar -t
