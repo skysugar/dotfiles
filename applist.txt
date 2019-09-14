@@ -96,13 +96,16 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 python-pip
+python-pysocks
 qbittorrent
 ranger
 reiserfsprogs
 rofi
 sed
 shadow
+shadowsocks
 sl
+speedtest-cli
 strace
 sudo
 sysfsutils
@@ -125,6 +128,7 @@ vi
 vim
 virtualbox
 visual-studio-code-bin
+wget
 which
 wireshark-qt
 wpa_supplicant
