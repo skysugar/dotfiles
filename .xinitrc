@@ -31,3 +31,4 @@ xset b off
 #[ -f /usr/bin/xcompmgr ] && /usr/bin/xcompmgr -fnc &
 #[ -f $HOME/.Xmodmap ] && /usr/bin/xmodmap $HOME/.Xmodmap
 [ -f /usr/bin/i3 ] && exec /usr/bin/i3
+#[ -f /usr/bin/awesome ] && exec /usr/bin/awesome
