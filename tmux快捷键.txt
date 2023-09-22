@@ -1,0 +1,76 @@
+C-s C-b     Send the prefix key
+C-s C-o     Rotate through the panes
+C-s C-z     Suspend the current client
+C-s Space   Select next layout
+C-s !       Break pane to a new window
+C-s #       List all paste buffers
+C-s $       Rename current session
+C-s &       Kill current window
+C-s '       Prompt for window index to select
+C-s (       Switch to previous client
+C-s )       Switch to next client
+C-s ,       Rename current window
+C-s .       Move the current window
+C-s /       Describe key binding
+C-s 0       Select window 0
+C-s 1       Select window 1
+C-s 2       Select window 2
+C-s 3       Select window 3
+C-s 4       Select window 4
+C-s 5       Select window 5
+C-s 6       Select window 6
+C-s 7       Select window 7
+C-s 8       Select window 8
+C-s 9       Select window 9
+C-s :       Prompt for a command
+C-s ;       Move to the previously active pane
+C-s =       Choose a paste buffer from a list
+C-s ?       List key bindings
+C-s C       Customize options
+C-s D       Choose a client from a list
+C-s E       Spread panes out evenly
+C-s M       Clear the marked pane
+C-s [       Enter copy mode
+C-s ]       Paste the most recent paste buffer
+C-s d       Detach the current client
+C-s f       Search for a pane
+C-s i       Display window information
+C-s m       Toggle the marked pane
+C-s n       Select the next window
+C-s o       Select the next pane
+C-s p       Select the previous window
+C-s q       Display pane numbers
+C-s s       Choose a session from a list
+C-s t       Show a clock
+C-s w       Choose a window from a list
+C-s x       Kill the active pane
+C-s z       Zoom the active pane
+C-s {       Swap the active pane with the pane above
+C-s }       Swap the active pane with the pane below
+C-s ~       Show messages
+C-s DC      Reset so the visible part of the window follows the cursor
+C-s PPage   Enter copy mode and scroll up
+C-s Up      Select the pane above the active pane
+C-s Down    Select the pane below the active pane
+C-s Left    Select the pane to the left of the active pane
+C-s Right   Select the pane to the right of the active pane
+C-s M-1     Set the even-horizontal layout
+C-s M-2     Set the even-vertical layout
+C-s M-3     Set the main-horizontal layout
+C-s M-4     Set the main-vertical layout
+C-s M-5     Select the tiled layout
+C-s M-n     Select the next window with an alert
+C-s M-o     Rotate through the panes in reverse
+C-s M-p     Select the previous window with an alert
+C-s M-Up    Resize the pane up by 5
+C-s M-Down  Resize the pane down by 5
+C-s M-Left  Resize the pane left by 5
+C-s M-Right Resize the pane right by 5
+C-s C-Up    Resize the pane up
+C-s C-Down  Resize the pane down
+C-s C-Left  Resize the pane left
+C-s C-Right Resize the pane right
+C-s S-Up    Move the visible part of the window up
+C-s S-Down  Move the visible part of the window down
+C-s S-Left  Move the visible part of the window left
+C-s S-Right Move the visible part of the window right
