@@ -6,6 +6,7 @@ font: "mono 10";
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
 /*	show-icons: false;*/
+show-icons: true;
 /*	terminal: "rofi-sensible-terminal";*/
 terminal: "termite";
 /*	ssh-client: "ssh";*/

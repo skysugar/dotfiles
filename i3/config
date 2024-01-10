@@ -276,6 +276,7 @@ for_window [title="X[Cc]hat.*"] floating enable
 for_window [title=".*Sublime Text"] floating enable
 #for_window [title=".*Atom"] floating enable
 for_window [title=".*WeChat$"] floating enable
+for_window [class="QQ"] floating enable
 
 # 进入i3后，设置一些启动程序
 #exec_always --no-startup-id numlockx on

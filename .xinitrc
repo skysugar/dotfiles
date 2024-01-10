@@ -1,5 +1,6 @@
 #!/bin/bash
-eval `dbus-launch --sh-syntax --exit-with-session`
+#eval `dbus-launch --auto-syntax --exit-with-session`
+dbus-update-activation-environment --systemd DISPLAY
 export GNOME_DESKTOP_SESSION_ID=Default
 export LC_CTYPE=zh_CN.UTF-8
 export LANG=zh_CN.utf-8
@@ -9,7 +10,6 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export TERM=xterm-256color
 export $(gnome-keyring-daemon -s)
-
 
 ## vertical screen 0 1 2 3
 #xrandr -o 0
