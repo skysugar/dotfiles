@@ -99,6 +99,7 @@ python-pip
 python-pysocks
 qbittorrent
 ranger
+radare2
 reiserfsprogs
 rofi
 sed
