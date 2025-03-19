@@ -1,0 +1,22 @@
+~/.config/nvim/
+├── lua/                  # 主要的 Lua 配置文件
+│   ├── core/             # 核心配置
+│   │   ├── init.lua      # 核心初始化配置（可选）
+│   │   ├── options.lua   # Vim 选项（set 相关）
+│   │   ├── keymaps.lua   # 按键映射
+│   │   ├── autocommands.lua # 自动命令
+│   ├── plugins/          # 插件管理
+│   │   ├── init.lua      # 插件管理器（如 lazy.nvim）
+│   │   ├── lsp.lua       # LSP 配置
+│   │   ├── cmp.lua       # 自动补全配置（nvim-cmp）
+│   │   ├── treesitter.lua # 语法高亮配置
+│   │   ├── telescope.lua  # 模糊查找配置
+│   │   ├── ...           # 其他插件
+│   ├── ui/               # UI 相关配置
+│   │   ├── colorscheme.lua # 主题设置
+│   │   ├── statusline.lua  # 状态栏配置
+│   │   ├── dashboard.lua   # 启动界面
+│   ├── utils/             # 工具函数
+│   │   ├── init.lua       # 通用工具函数
+├── init.lua              # 入口文件
+└── lazy-lock.json        # lazy.nvim 的插件锁定文件（如果用 lazy.nvim）
