@@ -25,7 +25,6 @@ set tabstop=2
 set shiftwidth=2
 set smartindent
 set autoindent
-set clipboard=unnamedplus
 set mouse=a
 
 " 使用 256 色
