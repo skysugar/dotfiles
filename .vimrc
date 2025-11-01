@@ -1,43 +1,70 @@
-execute pathogen#infect()
+"安装vim-plug插件管理器
+"curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"
+"安装完成后，进入vim执行 :PlugInstall 安装插件
+"
+
+" ---------- 基础设置 ----------
+set nocompatible
+set number
+set relativenumber
+set cursorline
+set termguicolors
+set encoding=utf-8
+set fileencoding=utf-8
+set ruler
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set smartindent
+set autoindent
+set clipboard=unnamedplus
+set mouse=a
 syntax enable
 filetype plugin indent on
 
-set number
-set encoding=utf-8
-set shiftwidth=2
-set ruler
-set incsearch
-set hlsearch
-"set background=dark
-"colorscheme solarized
+" ---------- 插件管理 ----------
+call plug#begin('~/.vim/plugged')
+Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
 
-nnoremap <F2> :set invpaste paste?<CR>
-imap <F2> <C-O>:set invpaste paste?<CR>
-set pastetoggle=<F2>
-
-map <C-l> :tabn<cr>             "下一个tab
-map <C-h> :tabp<cr>             "上一个tab
-map <C-n> :tabnew<cr>           "新tab
-map <C-j> :bn<cr>               "下一个文件
-map <C-k> :bp<cr>               "上一个文件
-
-autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"设置打开/关闭目录树的快捷键
-nnoremap <F10> :exe 'NERDTreeToggle'<CR>
-" 显示行号
+" ---------- NERDTree ----------
+autocmd VimEnter * if argc() == 0 | NERDTree | endif
+autocmd BufEnter * if (winnr('$') == 1 && exists('b:NERDTree')) | quit | endif
 let NERDTreeShowLineNumbers=1
-let NERDTreeAutoCenter=1
-" 是否显示隐藏文件
 let NERDTreeShowHidden=1
-" 设置宽度
 let NERDTreeWinSize=31
-" 在终端启动vim时，共享NERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
-" 忽略一下文件的显示
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']
-" 显示书签列表
 let NERDTreeShowBookmarks=1
+let NERDTreeIgnore=['\.pyc','\~$','\.swp']
+nnoremap <F10> :NERDTreeToggle<CR>
 
-" 启动powerline插件
-let g:powerline_pycmd="py3"
+" ---------- 快捷键 ----------
+let mapleader = " "
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>r :so %<CR>
+nnoremap <C-l> :tabn<cr>
+nnoremap <C-h> :tabp<cr>
+nnoremap <C-n> :tabnew<cr>
+nnoremap <C-j> :bn<cr>
+nnoremap <C-k> :bp<cr>
+
+" ---------- 外观 ----------
+set background=light
+colorscheme gruvbox
+let g:gruvbox_contrast_light = 'hard'
+let g:gruvbox_invert_selection = '0'
+let g:gruvbox_transparent_bg = 1
+let g:airline_theme='gruvbox'
+let g:airline_powerline_fonts=1
