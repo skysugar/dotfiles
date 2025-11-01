@@ -6,11 +6,13 @@
 "
 
 " ---------- 基础设置 ----------
+syntax enable
+filetype plugin indent on
+
 set nocompatible
 set number
 set relativenumber
 set cursorline
-set termguicolors
 set encoding=utf-8
 set fileencoding=utf-8
 set ruler
@@ -25,8 +27,18 @@ set smartindent
 set autoindent
 set clipboard=unnamedplus
 set mouse=a
-syntax enable
-filetype plugin indent on
+
+" 使用 256 色
+set t_Co=256
+
+" 启用终端 GUI 色
+if has("termguicolors")
+  set termguicolors
+endif
+
+" 设置光标颜色
+let &t_SI = "\e[6 q"    " 插入模式
+let &t_EI = "\e[2 q"    " 普通模式
 
 " ---------- 插件管理 ----------
 call plug#begin('~/.vim/plugged')
@@ -61,10 +73,11 @@ nnoremap <C-j> :bn<cr>
 nnoremap <C-k> :bp<cr>
 
 " ---------- 外观 ----------
-set background=light
+set background=dark        " dark 模式
 colorscheme gruvbox
-let g:gruvbox_contrast_light = 'hard'
+let g:gruvbox_contrast_dark = 'hard'    " dark 模式下的对比度，可选 soft/medium/hard
 let g:gruvbox_invert_selection = '0'
 let g:gruvbox_transparent_bg = 1
-let g:airline_theme='gruvbox'
+
+let g:airline_theme='gruvbox'           " Airline 配色使用 gruvbox
 let g:airline_powerline_fonts=1
